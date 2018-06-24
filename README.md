@@ -24,13 +24,14 @@
 	> bucket_name: "Your_Bucket_Name_S3" <br />
 	> queue_name: "Your_Queue_Name_SQS" <br />
 	> queue_region: "Your_Queue_Region" <br />
-	> mandrill_api_key: "Your_Mandrill_API_key"__ <br />
+	> mandrill_api_key: "Your_Mandrill_API_key" <br />
 
 	[How to get Your Mandrill API Key?](https://www.inboundnow.com/how-to-get-your-mandrill-api-key/)
 
 3. Change IP for Ubuntu server IP in /hosts.ini
 
 4. Run Ansible
+	
 	If You run remotely:
 
 	> ansible -i hosts.ini -m ping setup_animation <br />
