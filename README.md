@@ -11,32 +11,32 @@
 1. Install Ansible in you server:
 
 	Run this command on server:
-	>  $ sudo apt-get update
-	>  $ sudo apt-get install software-properties-common
-	>  $ sudo apt-add-repository ppa:ansible/ansible
-	>  $ sudo apt-get update
-	>  $ sudo apt-get install ansible
+	>  $ sudo apt-get update <br />
+	>  $ sudo apt-get install software-properties-common <br />
+	>  $ sudo apt-add-repository ppa:ansible/ansible <br />
+	>  $ sudo apt-get update <br />
+	>  $ sudo apt-get install ansible <br />
 
 	[Another methods](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 
 2. Сhange the variables in /group_vars/common.yml:
 
-> * bucket_name: "Your_Bucket_Name_S3"__ <br />
-> * queue_name: "Your_Queue_Name_SQS"_ <br />
-> * queue_region: "Your_Queue_Region"_ <br />
-> * mandrill_api_key: "Your_Mandrill_API_key"__ <br />
+	> bucket_name: "Your_Bucket_Name_S3" <br />
+	> queue_name: "Your_Queue_Name_SQS" <br />
+	> queue_region: "Your_Queue_Region" <br />
+	> mandrill_api_key: "Your_Mandrill_API_key"__ <br />
 
-[How to get Your Mandrill API Key?](https://www.inboundnow.com/how-to-get-your-mandrill-api-key/)
+	[How to get Your Mandrill API Key?](https://www.inboundnow.com/how-to-get-your-mandrill-api-key/)
 
 3. Change IP for Ubuntu server IP in /hosts.ini
 
 4. Run Ansible
-If You run remotely:
+	If You run remotely:
 
-> * ansible -i hosts.ini -m ping setup_animation
-> * ansible-playbook -i hosts.ini setup_animation.yml
+	> ansible -i hosts.ini -m ping setup_animation <br />
+	> ansible-playbook -i hosts.ini setup_animation.yml <br />
 
-If You run on the server Ubuntu:
+	If You run on the server Ubuntu:
 
-> * ansible -i hosts.ini -m ping setup_animation --connect local
-> * ansible-playbook -i hosts.ini setup_animation.yml --connect local
+	> ansible -i hosts.ini -m ping setup_animation --connect local <br />
+	> ansible-playbook -i hosts.ini setup_animation.yml --connect local <br />
