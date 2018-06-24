@@ -11,18 +11,18 @@
 1. Install Ansible in you server [All methods](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 
 Run this command on server:
-$ sudo apt-get update
-$ sudo apt-get install software-properties-common
-$ sudo apt-add-repository ppa:ansible/ansible
-$ sudo apt-get update
-$ sudo apt-get install ansible
+⋅⋅*$ sudo apt-get update
+⋅⋅*$ sudo apt-get install software-properties-common
+⋅⋅*$ sudo apt-add-repository ppa:ansible/ansible
+⋅⋅*$ sudo apt-get update
+⋅⋅*$ sudo apt-get install ansible
 
 2. Сhange the variables in /group_vars/common.yml:
 
-bucket_name: "Your_Bucket_Name_S3"
-queue_name: "Your_Queue_Name_SQS"
-queue_region: "Your_Queue_Region"
-mandrill_api_key: "Your_Mandrill_API_key"
+⋅⋅*bucket_name: "Your_Bucket_Name_S3"
+⋅⋅*queue_name: "Your_Queue_Name_SQS"
+⋅⋅*queue_region: "Your_Queue_Region"
+⋅⋅*mandrill_api_key: "Your_Mandrill_API_key"
 
 [How to get Your Mandrill API Key?](https://www.inboundnow.com/how-to-get-your-mandrill-api-key/)
 
