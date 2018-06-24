@@ -8,7 +8,7 @@
 ## Step by step
 ***
 ### For install all needed packeges you need:
-1. Install Ansible in you server:
+#### 1. Install Ansible in you server:
 
 	Run this command on server:
 	>  $ sudo apt-get update <br />
@@ -19,7 +19,7 @@
 
 	[Another methods](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 
-2. Сhange the variables in /group_vars/common.yml:
+#### 2. Сhange the variables in /group_vars/common.yml:
 
 	> bucket_name: "Your_Bucket_Name_S3" <br />
 	> queue_name: "Your_Queue_Name_SQS" <br />
@@ -28,9 +28,9 @@
 
 	[How to get Your Mandrill API Key?](https://www.inboundnow.com/how-to-get-your-mandrill-api-key/)
 
-3. Change IP for Ubuntu server IP in /hosts.ini
+#### 3. Change IP for Ubuntu server IP in /hosts.ini
 
-4. Run Ansible
+#### 4. Run Ansible
 	
 	If You run remotely:
 
