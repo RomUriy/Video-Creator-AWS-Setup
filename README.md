@@ -11,11 +11,12 @@
 1. Install Ansible in you server:
 
 	Run this command on server:
-	> * $ sudo apt-get update
-	> * $ sudo apt-get install software-properties-common
-	> * $ sudo apt-add-repository ppa:ansible/ansible
-	> * $ sudo apt-get update
-	> * $ sudo apt-get install ansible
+	>  $ sudo apt-get update
+	>  $ sudo apt-get install software-properties-common
+	>  $ sudo apt-add-repository ppa:ansible/ansible
+	>  $ sudo apt-get update
+	>  $ sudo apt-get install ansible
+	
 	[Another methods](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 
 2. Сhange the variables in /group_vars/common.yml:
