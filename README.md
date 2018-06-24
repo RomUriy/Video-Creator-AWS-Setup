@@ -16,15 +16,15 @@
 	>  $ sudo apt-add-repository ppa:ansible/ansible
 	>  $ sudo apt-get update
 	>  $ sudo apt-get install ansible
-	
+
 	[Another methods](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 
 2. Сhange the variables in /group_vars/common.yml:
 
-> * bucket_name: "Your_Bucket_Name_S3"<br />
-> * queue_name: "Your_Queue_Name_SQS"<br />
-> * queue_region: "Your_Queue_Region"<br />
-> * mandrill_api_key: "Your_Mandrill_API_key"<br />
+> * bucket_name: "Your_Bucket_Name_S3"__ <br />
+> * queue_name: "Your_Queue_Name_SQS"_ <br />
+> * queue_region: "Your_Queue_Region"_ <br />
+> * mandrill_api_key: "Your_Mandrill_API_key"__ <br />
 
 [How to get Your Mandrill API Key?](https://www.inboundnow.com/how-to-get-your-mandrill-api-key/)
 
