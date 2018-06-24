@@ -1,0 +1,57 @@
+---
+- hosts: all
+  become: yes
+  gather_facts: False
+
+  tasks:
+  - name: install python 2
+    raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
+
+- hosts: common
+  become: yes
+  tasks:
+    - name: "os dependencies"
+      apt:
+        name: "{{item}}"
+      with_items:
+        - python-pip
+
+- hosts: transcoding
+  become: yes
+  vars:
+    app_path: '/home/ubuntu/transcoding'
+  tasks:
+    - name: "os dependencies"
+      apt:
+        name: "{{item}}"
+      with_items:
+        - "ffmpeg"
+        - "python-pip"
+    - lineinfile:
+        dest: "/home/ubuntu/.bashrc"
+        line: "{{item}}"
+      with_items:
+        - "export APP_ENV=prod"
+        - "export QUEUE_NAME={{queue_name}}"
+        - "export QUEUE_REGION={{queue_region}}"
+        - "export BUCKET_NAME={{bucket_name}}"
+        - "export PYTHONPATH={{app_path}}"
+        - "export APP_ENV=prod"
+        - "export MANDRILL_KEY={{mandrill_api_key}}"
+
+    - name: "install transcode app"
+      git:
+        repo: 'https://github.com/RomUriy/Video-Creator-AWS.git'
+        dest: "{{app_path}}"
+        force: yes
+    - name: "install app dependencies"
+      pip:
+        requirements: "{{app_path}}/requirements"
+
+    - name: "add owner"
+      file:
+        path: "{{app_path}}"
+        owner: "{{ansible_user}}"
+        group: "{{ansible_user}}"
+        recurse: yes
+

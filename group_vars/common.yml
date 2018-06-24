@@ -1,0 +1,5 @@
+---
+bucket_name: "Your_Bucket_Name_S3"
+queue_name: "Your_Queue_Name_SQS"
+queue_region: "Your_Queue_Region"
+mandrill_api_key: "Your_Mandrill_API_key"
